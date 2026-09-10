@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+/* Zaglavlje */
+
+header {
+  background-color: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 17px;
+}
+
+/* Naslovnica */
+
+.naslovnica {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.sadrzaj {
+  max-width: 650px;
+}
+
+.sadrzaj h2 {
+  font-size: 45px;
+  color: #1d4ed8;
+  margin-bottom: 15px;
+}
+
+.sadrzaj p {
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Gumb */
+
+.gumb {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  padding: 13px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.gumb:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Projekti */
+
+.projekti {
+  padding: 50px 8%;
+  background-color: white;
+  text-align: center;
+}
+
+.projekti h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.kartice {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.kartica {
+  width: 280px;
+  padding: 25px;
+  background-color: #f4f6f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.kartica h3 {
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.kartica p {
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.kartica a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.kartica a:hover {
+  text-decoration: underline;
+}
+
+/* Podnožje */
+
+footer {
+  background-color: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 0;
+}
+
+/* Mobiteli */
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  .sadrzaj h2 {
+    font-size: 35px;
+  }
+
+  .sadrzaj p {
+    font-size: 17px;
+  }
+
+  .kartica {
+    width: 100%;
+  }
+}
