@@ -1,0 +1,19 @@
+body {
+  background-color: aqua;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  text-align: center;
+  margin-left: 300px;
+}
+input[type="submit"] {
+  padding: 10px;
+  border-radius: 3px;
+}
+table {
+  border: 2px solid black;
+}
