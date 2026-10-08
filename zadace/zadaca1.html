@@ -1,0 +1,251 @@
+¨<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skriptni jezici</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <ul class="nav">
+      <li class="li"><a href="#home" target="_blank">Home</a></li>
+      <li class="li"><a href="news.html" target="_blank">News</a></li>
+      <li class="li"><a href="kontakt.html" target="_blank">Contact</a></li>
+      <li class="li"><a href="onama.html" target="_blank">About</a></li>
+    </ul>
+    <br />
+    <h1>HTML,CSS,Canvas i SVG</h1>
+    <p>
+      <i>Canvas</i> je HTML5 element koji pomocu JavaScript-a omogucava
+      dinamicko iscrtavanje<br />razlicitih oblika, dodavanje slika, kreiranje
+      animacija na web stranici i sl.
+    </p>
+    <p>
+      Na platnu (canvas-u) to ne radimo korištenjem novog jezika (kao što je to
+      slučaj kod SVG) ili <br />
+      korištenjem Flasha. Najčešće uporabe platna su:
+    </p>
+    <ul>
+      <li>crtanje grafova</li>
+      <li>animiranje,igre</li>
+      <li>kompozicija slike</li>
+    </ul>
+    <hr />
+    <p>
+      <strong>SVG</strong><i>(Scalable Vector Graphics)</i> grafika ne gubi
+      kvalitetu prilikom zumiranja ili resize-a
+    </p>
+    <p>
+      Svi crteži mogu biti interaktivni i dinamički. Svaki element i atribut SVG
+      datoteke može biti<br />
+      animiran. Animacije mogu biti definirane i pokrenute interaktivno ili
+      pomoću skripti.
+    </p>
+    <p>SVG integrira druge W3C standarde kao što su DOM, XSL …</p>
+    <hr />
+    <h3>Usporedba SVG-a i Canvasa</h3>
+    <table border="1">
+      <tr>
+        <th>SVG</th>
+        <th>HTML CANVAS</th>
+      </tr>
+      <tr>
+        <td>
+          SVG ima bolju skalabilnost, tako da moze imati bolje slike sa velikom
+          <br />
+          kvalitetom na bilo kojoj rezoluciji
+        </td>
+        <td>
+          Canvas ima losu skalabilnost,<br />
+          nije prikaladan za rad s velikim rezolucijom
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SVG daje bolje perfomanse sa manjim <br />
+          brojem objekata ili vecom <br />povrsinom
+        </td>
+        <td>
+          Canvas daje bolje perfomanse <br />
+          za rad sa manjim povrsinama <br />
+          ili vecim brojem objekata
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SVG se moze modificirati uz pomoc <br />
+          skripte i CSS-a
+        </td>
+        <td>
+          Canvas se moze modificirati <br />
+          samo uz pomoc skripte
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SVG je baziran na vektorima i sastavljen <br />
+          je od oblika
+        </td>
+        <td>Canvas je baziran na pixelima</td>
+      </tr>
+    </table>
+    <br />
+    <table width="750">
+      <tr>
+        <th>Ime</th>
+        <td>Marko</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Telefon</th>
+        <td>555-1234</td>
+      </tr>
+      <tr>
+        <td>555-8754</td>
+      </tr>
+    </table>
+    <img src="./slika1.png" alt="Slika vektora" />
+    <h2>Primjer SVG-a i Canvasa</h2>
+    <canvas
+      id="myCanvas"
+      width="600"
+      height="600"
+      style="border: 1px solid #000"
+    ></canvas>
+    <svg width="600" height="400">
+      <rect
+        x="200"
+        y="100"
+        width="170"
+        height="200"
+        fill="white"
+        stroke="black"
+        stroke-width="0"
+      />
+      <rect
+        x="200"
+        y="90"
+        width="170"
+        height="20"
+        fill="blue"
+        stroke="blue"
+        stroke-width="0"
+      />
+      <rect
+        x="150"
+        y="130"
+        width="50"
+        height="70"
+        fill="orange"
+        stroke="blue"
+        stroke-width="0"
+      />
+      <rect
+        x="370"
+        y="130"
+        width="50"
+        height="70"
+        fill="orange"
+        stroke="blue"
+        stroke-width="0"
+      />
+      <circle
+        cx="250"
+        cy="160"
+        r="20"
+        fill="blue"
+        stroke="black"
+        stroke-width="0"
+      />
+      <circle
+        cx="325"
+        cy="160"
+        r="20"
+        fill="blue"
+        stroke="black"
+        stroke-width="0"
+      />
+    </svg>
+
+    <h2>KONTAKTIRAJTE NAS</h2>
+    <form action="forma.html" method="get">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" /><br /><br />
+      <label for="lname">Opis kontakta:</label>
+      <input type="text" id="lname" name="lname" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <script>
+      let c = document.getElementById("myCanvas");
+      let ctx = c.getContext("2d");
+
+      //pravokutnik
+      ctx.beginPath();
+      ctx.rect(10, 10, 400, 400);
+      ctx.fillStyle = "lightblue";
+      ctx.fill();
+      ctx.beginPath();
+      ctx.rect(100, 100, 200, 200);
+      ctx.fillStyle = "WhiteSmoke";
+      ctx.fill();
+      ctx.beginPath();
+      ctx.rect(100, 100, 200, 20);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.beginPath();
+      ctx.rect(70, 150, 30, 50);
+      ctx.fillStyle = "orange";
+      ctx.fill();
+      ctx.beginPath();
+      ctx.rect(300, 150, 30, 50);
+      ctx.fillStyle = "orange";
+      ctx.fill();
+
+      //krug
+      ctx.beginPath();
+      ctx.arc(200, 230, 50, 0, Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+      //krug
+      ctx.beginPath();
+      ctx.arc(160, 170, 20, 0, 2 * Math.PI);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+
+      //krug
+      ctx.beginPath();
+      ctx.arc(240, 170, 20, 0, 2 * Math.PI);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      //krug
+      ctx.beginPath();
+      ctx.arc(200, 330, 20, 0, 2 * Math.PI);
+      ctx.fillStyle = "orange";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(230, 220);
+      ctx.lineTo(205, 180);
+      ctx.lineTo(180, 220);
+      ctx.lineTo(230, 220);
+      ctx.fillStyle = "orange";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(180, 330);
+      ctx.lineTo(140, 360);
+      ctx.lineTo(140, 300);
+      ctx.lineTo(180, 330);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.beginPath();
+      ctx.moveTo(220, 330);
+      ctx.lineTo(260, 360);
+      ctx.lineTo(260, 300);
+      ctx.lineTo(220, 330);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+    </script>
+  </body>
+</html>
