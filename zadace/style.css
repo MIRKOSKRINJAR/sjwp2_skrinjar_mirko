@@ -50,3 +50,21 @@ a:hover {
 svg {
   background-color: lightblue;
 }
+form{
+    border-radius: 4px;
+}
+label{
+      width: 100%;
+          border-radius: 4px;
+}
+input{
+      width: 100%;
+      height: 30px;
+          border-radius: 4px;
+}
+button{
+  background-color: #C2F8F7;
+      width: 100%;
+      height: 50px;
+          border-radius: 4px;
+}
